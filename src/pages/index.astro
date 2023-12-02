@@ -1,0 +1,113 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import Card from "../components/card.astro";
+import firstImg from '../images/1.webp';
+import secondImg from '../images/2.jpg';
+import thirdImg from '../images/3.jpg';
+import fourthImg from '../images/4.jpg';
+import fifthImg from '../images/5.webp';
+import sixthImg from '../images/6.jpg';
+---
+
+<Layout title="Grzybowy blog">
+  <main>
+    <header>
+      <h1 class="logo">Grzybowy BLOG</h1>
+
+      <nav id="topnav">
+        <ul class="menu">
+          <li><a href="/">Strona główna</a></li>
+          <li><a href="#">Pierwszy raz tutaj?</a></li>
+          <li><a href="#">Czy grzyby są niebezpieczne?</a></li>
+          <li><a href="#">O autorze</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+	<div class="images-div">
+		<Card src={firstImg} />
+		<Card src={secondImg}  />
+		<Card src={thirdImg}  />
+		<Card src={fourthImg} />
+		<Card src={fifthImg}/>
+		<Card src={sixthImg}/>
+	</div>
+  </main>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+h1.logo
+{
+	font-size: 44px;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+	letter-spacing: 5px;
+	margin-top: 0;
+	margin-bottom: 40px;
+	font-family: 'Permanent Marker', cursive;
+}
+#topnav
+{
+	background: rgba(27, 27, 27, 0.4);
+	text-align: center;
+}
+
+.menu
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	font-size: 18px;
+	min-height: 38px;
+	line-height: 200%;
+}
+
+.menu > li
+{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: #fff solid 5px;
+	border-left: #fff solid 0px;
+	border-right: #fff solid 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	border-radius: 10px;
+	transition: all 0.1s;
+}
+.menu > li:hover
+{
+	background: rgba(255, 255, 255, 0.1);
+	border-left: #fff solid 5px;
+	border-right: #fff solid 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.menu a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+
+	/* make 3 images per row */
+	.images-div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 25vh 25vh;
+		padding: 0;
+	}
+
+	
+	
+	
+	
+
+
+</style>

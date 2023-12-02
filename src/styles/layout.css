@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: rgb(4,36,0);
+    background: radial-gradient(circle, rgba(4,36,0,1) 0%, rgba(57,231,0,1) 41%, rgba(240,0,156,1) 72%, rgba(126,0,255,1) 100%); 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    min-height: 115vh;
+}
+html {
+    margin: 0;
+    padding: 0;
+}

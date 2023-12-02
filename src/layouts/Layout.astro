@@ -1,0 +1,31 @@
+---
+import '../styles/layout.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>{title}</title>
+	<meta name="description" content="Blog na temat ciekawych grzybów co można zbierać!">
+	<meta name="keywords" content="natura, grzyby, blog, przemyślenia">
+	<meta name="author" content="Leśnik">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	
+</style>
