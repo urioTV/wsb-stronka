@@ -1,113 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Card from "../components/card.astro";
-import firstImg from '../images/1.webp';
-import secondImg from '../images/2.jpg';
-import thirdImg from '../images/3.jpg';
-import fourthImg from '../images/4.jpg';
-import fifthImg from '../images/5.webp';
-import sixthImg from '../images/6.jpg';
+import chagaImg from "../images/chaga.jpg";
+import cordycepsImg from "../images/cordyceps.webp";
+import lionsmaneImg from "../images/lionsmane.jpg";
+import maitakeImg from "../images/maitake.jpg";
+import reishiImg from "../images/reishi.webp";
+import shiitakeImg from "../images/shiitake.jpg";
 ---
 
 <Layout title="Grzybowy blog">
   <main>
-    <header>
-      <h1 class="logo">Grzybowy BLOG</h1>
-
-      <nav id="topnav">
-        <ul class="menu">
-          <li><a href="/">Strona główna</a></li>
-          <li><a href="#">Pierwszy raz tutaj?</a></li>
-          <li><a href="#">Czy grzyby są niebezpieczne?</a></li>
-          <li><a href="#">O autorze</a></li>
-          <li><a href="#">Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
-	<div class="images-div">
-		<Card src={firstImg} />
-		<Card src={secondImg}  />
-		<Card src={thirdImg}  />
-		<Card src={fourthImg} />
-		<Card src={fifthImg}/>
-		<Card src={sixthImg}/>
-	</div>
+    <div class="images-div">
+      <Card src={chagaImg} title="Chaga" desc="Chaga, czyli Błyskoporek podkorowy, to grzyb antyoksydacyjny rosnący na drzewach. Zwalcza wolne rodniki, stres oksydacyjny, spowalnia starzenie i może hamować rozwój komórek rakowych oraz obniżać poziom złego cholesterolu (LDL). "/>
+      <Card src={cordycepsImg} title="Cordyceps" desc="Cordyceps, czyli Maczużnik chiński, to grzyb z gór Chin i Tybetu. Znany z właściwości wzmacniających energię, układ odpornościowy, łagodzenia stresu, regulacji ciśnienia krwi i działania przeciwzapalnego." />
+      <Card src={lionsmaneImg} title="Lion's Mane" desc="Lion's mane, Hericium, czy też Soplówka jeżowata, to wszystko nazwy grzyba leczniczego. W rzeczywistości jest wartościowy głównie dlatego, że wspiera produkcję białka czynnika wzrostu nerwów (NFG) i mieliny."/>
+      <Card src={maitakeImg} title="Maitake" desc="Maitake, po polsku Żagwica listkowata, to tradycyjny grzyb pochodzący z Japonii. Grzyb Maitake, podobnie jak inne rodzaje grzybów witalnych, jest klasyfikowany jako adaptogen, ponieważ może pomóc w problemach psychicznych i fizycznych." />
+      <Card src={reishiImg} title="Reishi" desc="Istnieje badanie, w którym 34 pacjentów z zaawansowanym rakiem leczono przez 12 tygodni polisacharydem pochodzącym z Reishi. Pacjenci, którzy byli leczeni, doświadczyli znacznej poprawy funkcjonowania  ich układu odpornościowego."/>
+      <Card src={shiitakeImg} title="Shiitake" desc="Shiitake, znany również jako Twardziak jadalny, jest jednym z niewielu grzybów leczniczych, który również świetnie smakuje. Jednocześnie jest to jeden z najpopularniejszych i najlepiej przebadanych grzybów na świecie. Nazywany jest również eliksirem życia. " />
+    </div>
   </main>
 </Layout>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-h1.logo
-{
-	font-size: 44px;
-	font-weight: 700;
-	color: white;
-	text-align: center;
-	letter-spacing: 5px;
-	margin-top: 0;
-	margin-bottom: 40px;
-	font-family: 'Permanent Marker', cursive;
-}
-#topnav
-{
-	background: rgba(27, 27, 27, 0.4);
-	text-align: center;
-}
-
-.menu
-{
-	list-style-type: none;
-	margin: 0;
-	padding: 10px;
-	font-size: 18px;
-	min-height: 38px;
-	line-height: 200%;
-}
-
-.menu > li
-{
-	display: inline-block;
-	padding-left: 20px;
-	padding-right: 20px;
-	border: #fff solid 5px;
-	border-left: #fff solid 0px;
-	border-right: #fff solid 0px;
-	margin-left: 5px;
-	margin-right: 5px;
-	border-radius: 10px;
-	transition: all 0.1s;
-}
-.menu > li:hover
-{
-	background: rgba(255, 255, 255, 0.1);
-	border-left: #fff solid 5px;
-	border-right: #fff solid 5px;
-	margin-left: 0px;
-	margin-right: 0px;
-}
-.menu a
-{
-	color: #fff;
-	text-decoration: none;
-}
-
-
-
-	/* make 3 images per row */
-	.images-div {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		margin: 25vh 25vh;
-		padding: 0;
-	}
-
-	
-	
-	
-	
-
-
+  .images-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25vh 25vh;
+    padding: 0;
+  }
 </style>
